@@ -4,7 +4,10 @@
 var startBTN = document.querySelector("#start");
 var startScreen = document.querySelector("#start-screen");
 var questions = document.querySelector("#questions");
+
+var questionID = document.getElementById("question-title");
 var timer = document.getElementById("time");
+
 
 var secondsLeft = 10;
 
