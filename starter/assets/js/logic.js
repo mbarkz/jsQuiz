@@ -4,16 +4,36 @@
 var startBTN = document.querySelector("#start");
 var startScreen = document.querySelector("#start-screen");
 var questions = document.querySelector("#questions");
+var answerOps = document.querySelector("#choices")
 
 var questionID = document.getElementById("question-title");
+var listEl = document.createElement("ol");
+var li1 = document.createElement("li")
+var li2 = document.createElement("li")
+var li3 = document.createElement("li")
+var li4 = document.createElement("li")
+
 var timer = document.getElementById("time");
+var secondsLeft = 20;
 
 
-var secondsLeft = 10;
 
 startBTN.addEventListener("click", function hideStart() {
     startScreen.setAttribute("style", "display: none")
+    questions.setAttribute("style", "display: block");
+    questionID.textContent = "What do you call a drunken sailor?"
+    answerOps.appendChild(listEl);
+    listEl.appendChild(li1);
+    listEl.appendChild(li2);
+    listEl.appendChild(li3);
+    listEl.appendChild(li4);
+    li1.textContent = "Bananas";
+    li2.textContent = "Boob";
+    li3.textContent = "Steve";
+    li4.textContent = "Hello";
 })
+
+
 
 startBTN.addEventListener("click", function startTimer() {
     var timerInterval = setInterval(function() {
